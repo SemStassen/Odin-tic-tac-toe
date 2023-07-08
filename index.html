@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Tic Tac Toe</h1>
+    <button class="restart">Restart</button>
+  </header>
+  <main>
+    <div class="game-status">
+      <p>Waiting to start...</p>
+    </div>
+    <div class="game-wrapper">
+      <div class="gameboard">
+      
+      </div>
+      <div class="win-screen hidden" >
+        <p class="player-name"></p>
+        <p class="player-marker">X</p>
+        <p>Wins</p>
+      </div>
+    </div>
+    <div class="game-score">
+      <div class="player-one player">
+        <div>
+          <p class="name">Player X</p>
+          <p class="score">0</p>
+        </div>
+      </div>
+      <div class="divider">
+          <p>:</p>
+      </div>
+      <div class="player-two player">
+        <div>
+          <p class="name">Player O</p>
+          <p class="score">0</p>
+        </div>
+      </div>
+    </div>
+    <div class="new-round hidden">
+      <button>New Round</button>
+    </div>
+    <dialog>
+      <form action="" method="post">
+        <p>Mode</p>
+        <section class="playercount">
+        <div>
+        <input type="radio" name="playerCount" value="1" id="singeplayer" checked>
+        <label for="singeplayer">Singeplayer</label>
+      </div>
+      <div>
+        <input type="radio" name="playerCount" value="2" id="multiplayer">
+        <label for="multiplayer">Multiplayer</label>
+      </div>
+      </section>
+      <p>Players</p>
+      <section>
+        <div class="player-wrapper">
+          <label for="player_one_name">Player 1</label>
+          <input type="text" name="playerOneName" id="player_one_name" placeholder="player 1 name" required>
+        </div>
+        <div class="player-wrapper multiplayer hidden">
+          <label for="player_two_name">Player 2</label>
+          <input type="text" name="playerTwoName" id="player_two_name" placeholder="player 2 name">
+        </div>
+      </section>  
+      <button type="submit">Start game</button>
+      </form>
+    </dialog>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'nexa_rust_handmadeextended';
+  src: url('/fonts/nexarusthandmade-extended-webfont.woff2') format('woff2'),
+       url('/fonts/nexarusthandmade-extended-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.hidden {
+  display: none !important;
+}
+
+:root {
+  --primary-color: rgb(1,71,169);
+  --primary-color-hover: rgb(68, 139, 238);
+  --secondary-color: rgb(255,211,2);
+  --background-color: rgb(247,234,207);
+  --message-color: rgb(185,32,29);
+  --tile-border-radius: 0.5rem;
+  --base-margin: 1.5rem;
+}
+
+*, *::before, *::after {
+  transition: all 0.1s ease-in-out;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.5em;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+main .game-wrapper {
+  background-color: var(--background-color);
+  margin: 0 auto;
+}
+
+.gameboard {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 5px;
+  max-width: 450px;
+  max-height: 450px;
+  min-width: 350px;
+  min-height: 350px;
+  height: 50vmin;
+  width: 50vmin;
+  margin: 0 auto;
+}
+.gameboard .game-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  font-family: 'nexa_rust_handmadeextended';
+  color: var(--secondary-color);
+  font-size: 5rem;
+}
+
+.game-status p {
+  color: var(--message-color);
+  text-align: center;
+  margin-block: var(--base-margin);
+  font-size: 2rem; 
+  font-weight: bold;
+}
+
+.game-score {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--primary-color);
+  margin-top: 1.5rem;
+}
+
+.game-score .divider {
+  align-self: end;
+  font-size: 2rem;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+
+.game-score .player {
+  flex: 1 1 0;
+}
+
+.game-score .player.player-one > div{
+  margin-inline: auto 0;
+}
+
+.game-score .player > div {
+  width: fit-content;
+  text-align: center;
+}
+
+.game-score .player .name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-score .player .score {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.win-screen {
+  font-size: 2rem;
+  text-align: center;
+
+}
+
+.win-screen p {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.win-screen .player-marker {
+  font-family: 'nexa_rust_handmadeextended';
+  color: var(--secondary-color);
+  font-size: 5rem;
+  margin-block: 1rem;
+  font-weight: 400;
+}
+
+
+header {
+  background-color: var(--secondary-color);
+}
+
+header h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-block: 1rem;
+}
+
+header button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+dialog p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+dialog section {
+  margin-block: 1rem;
+}
+
+dialog .playercount {
+  display: flex;
+  gap: 1rem;
+}
+
+dialog .player-wrapper.hidden {
+  display: none;
+}
+
+dialog .player-wrapper.multiplayer {
+  margin-top: 1rem;
+}
+
+dialog .player-wrapper label {
+  font-weight: bold;
+  display: block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+dialog .player-wrapper input {
+  padding: 0.25em;
+  font-size: 1.1rem;
+}
+
+dialog button {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.new-round button {
+  display: block;
+  margin: 3rem auto 0 auto;
+}
